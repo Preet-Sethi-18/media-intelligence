@@ -64,7 +64,7 @@ class PipelineRunner:
             if self.log_path.exists():
                 for line in self.log_path.read_text(errors="replace").splitlines():
                     if line.strip() and not any(noise in line for noise in _NOISE):
-                        lines.append(line[:300])
+                        lines.append(line[:2000])  # long enough for full error messages
             return {"state": "running" if code is None else "finished", "started_at": self.started_at,
                     "finished_at": self.finished_at, "exit_code": self.exit_code,
                     "exit_meaning": EXIT_MEANING.get(self.exit_code) if self.exit_code is not None else None,
