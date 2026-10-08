@@ -234,6 +234,9 @@ def test_request_id_is_echoed_when_safe_and_replaced_otherwise(client):
 
 
 def test_api_has_no_write_routes(client):
-    methods = {method for route in client.app.routes for method in getattr(route, "methods", ())}
-    assert methods <= {"GET", "HEAD"}
+    # The only non-GET route is the browser interface's "run the configured pipeline" action: it takes no input
+    # (no URLs, no paths), so the HTTP surface still cannot crawl arbitrary pages or write graph data directly.
+    writes = {(route.path, method) for route in client.app.routes for method in getattr(route, "methods", ())
+              if method not in {"GET", "HEAD"}}
+    assert writes == {("/ui-api/pipeline", "POST")}
     assert_error(client.post("/entities/central"), 405, "method_not_allowed")

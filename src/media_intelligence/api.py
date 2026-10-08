@@ -364,6 +364,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             return {"status": "ok", "version": __version__, "schema_version": db.user_version(conn),
                     "counts": analysis.graph_counts(conn)}
 
+    from . import ui  # browser interface; adds pages and helpers, leaves the routes above unchanged
+    ui.install(app, settings)
     return app
 
 

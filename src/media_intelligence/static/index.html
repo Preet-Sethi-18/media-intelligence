@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media Intelligence</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/cytoscape@3.30.2/dist/cytoscape.min.js"></script>
+</head>
+<body>
+<header>
+  <h1>Media Intelligence</h1>
+  <nav>
+    <a href="#overview" data-view="overview">Overview</a>
+    <a href="#explore" data-view="explore">Explore graph</a>
+    <a href="#central" data-view="central">Most connected</a>
+    <a href="#new" data-view="new">New connections</a>
+    <a href="#pipeline" data-view="pipeline">Run pipeline</a>
+  </nav>
+</header>
+
+<main>
+  <section id="view-overview" class="view">
+    <p class="intro">This tool reads news articles, Hacker News threads and Mastodon posts, finds the people,
+      organisations, places and topics in them, and records <b>how</b> they are connected, with the sentence
+      each connection came from. This page shows what is in the database right now.</p>
+    <div id="overview-cards" class="cards"></div>
+    <h2>Sources the crawler uses</h2>
+    <p class="hint">Set in <code id="config-path">config/sources.toml</code>. To crawl other pages, change the
+      <code>seeds</code> there and run the pipeline again.</p>
+    <div id="overview-sources"></div>
+    <h2>Pipeline runs</h2>
+    <div id="overview-runs"></div>
+  </section>
+
+  <section id="view-explore" class="view" hidden>
+    <p class="intro">Type a name to see what it is connected to. Each <b>dot</b> is a person, organisation, place
+      or topic; each <b>line</b> is a connection found in the text. Coloured, labelled lines say <i>how</i> they
+      are connected (acquired, sanctioned, attacked, …). Click a line to read the sentence it came from; click a
+      dot to explore from there.</p>
+    <form id="explore-form" class="controls">
+      <input id="explore-name" list="entity-names" placeholder="e.g. OpenAI, Iran, Nvidia, Mark Rutte" required>
+      <datalist id="entity-names"></datalist>
+      <label>Steps away
+        <select id="explore-depth"><option value="1">1 (direct)</option><option value="2">2 (and theirs)</option></select>
+      </label>
+      <label>View
+        <select id="explore-mode"><option value="simple">Simple (key links)</option><option value="full">Full (everything)</option></select>
+      </label>
+      <button type="submit">Show</button>
+    </form>
+    <div id="explore-message" class="message" hidden></div>
+    <div class="graph-wrap">
+      <div id="graph"></div>
+      <aside id="legend"></aside>
+    </div>
+    <div id="explore-lists" class="lists"></div>
+  </section>
+
+  <section id="view-central" class="view" hidden>
+    <p class="intro">Entities connected to the most <b>different</b> other entities. "Connections" counts distinct
+      neighbours; "Kinds of connection" counts different relation types. Broad places and topics rank high
+      because they appear next to everything. Click a name to explore it.</p>
+    <div id="central-table"></div>
+  </section>
+
+  <section id="view-new" class="view" hidden>
+    <p class="intro">Connections that are <b>new</b> since a moment in time, or that <b>grew a lot</b>
+      (at least 3 more web pages <i>and</i> at least 50 % more than before). Pick the moment below; by default it is
+      the start of the latest pipeline run. Click a row to read the evidence.</p>
+    <form id="new-form" class="controls">
+      <label>Since (UTC) <input id="new-since" placeholder="2026-10-07T20:10:40Z" required></label>
+      <button type="submit">Show</button>
+    </form>
+    <div id="new-message" class="message" hidden></div>
+    <div id="new-table"></div>
+  </section>
+
+  <section id="view-pipeline" class="view" hidden>
+    <p class="intro">Runs the whole pipeline: crawl the seed pages in the config with Crawl4AI → clean the text →
+      find entities and connections → save them to the database. It takes several minutes (Hacker News asks for
+      30 seconds between pages). When it finishes, the other pages show the new data.</p>
+    <p class="hint">Database: <code id="pipeline-db"></code>. A database built with older extraction rules cannot
+      be extended; start the server with a new <code>MI_DATABASE_PATH</code> (the default <code>data/</code> one is fine).</p>
+    <button id="pipeline-start">Run pipeline</button>
+    <div id="pipeline-status" class="message" hidden></div>
+    <pre id="pipeline-log" hidden></pre>
+  </section>
+</main>
+
+<aside id="drawer" hidden>
+  <button id="drawer-close" aria-label="Close">×</button>
+  <div id="drawer-body"></div>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>

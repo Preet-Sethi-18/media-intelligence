@@ -43,7 +43,7 @@ Politics Stack Exchange (Cloudflare challenge), Quora (robots.txt).
 Requires Linux/macOS, Python 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
-git clone <URL of this repository> media-intelligence && cd media-intelligence
+git clone https://github.com/Preet-Sethi-18/media-intelligence.git && cd media-intelligence
 uv sync --locked                       # dependencies + pinned spaCy model en_core_web_sm 3.8.0
 uv run crawl4ai-setup                  # Crawl4AI's browser setup
 uv run python -m playwright install --with-deps chromium   # browser + OS libraries (needs sudo for the OS part)
@@ -65,6 +65,29 @@ Settings come from environment variables or `.env` (see `.env.example`): `MI_DAT
 (default `data/media_intelligence.sqlite3`), `MI_REPORT_DIR`, `MI_SPACY_MODEL`, `MI_GROWTH_MIN_DELTA`,
 `MI_GROWTH_MIN_RATIO`. Exit codes: `0` complete, `1` fatal, `2` setup/config error, `3` partial
 (a configured source stored nothing, or a seed failed).
+
+## Visual interface
+
+The API server also serves a browser interface at **http://127.0.0.1:8000/** (it redirects to `/ui/`):
+
+```bash
+uv run uvicorn media_intelligence.api:app --port 8000                                     # your own data in data/
+MI_DATABASE_PATH=examples/final.sqlite3 uv run uvicorn media_intelligence.api:app --port 8000   # the shipped data
+```
+
+| Page | What it shows |
+| --- | --- |
+| Overview | graph size, the sources and seeds from `config/sources.toml`, and every pipeline run with its problems |
+| Explore graph | type a name: **Simple** view puts it in the centre with its typed relations and its 10 most frequent "mentioned together" partners (depth 2 adds typed links one step further out); **Full** view draws everything the endpoint returns. Colour = entity type, blue labelled line = typed relation, dashed = "mentioned together". Below the graph the same links are listed in words. Click a line or list item for the evidence sentence and source link; click a dot to explore from it |
+| Most connected | `/entities/central` as a table |
+| New connections | `/connections/new` for a chosen time (default: start of the latest run); click a row for evidence |
+| Run pipeline | runs the unchanged `media-intelligence ingest` with the server's config and database, and streams its log |
+
+It is a static page (`src/media_intelligence/static/`, graph drawing with Cytoscape.js from a CDN) that calls
+the same endpoints; `ui.py` adds only an overview helper and the pipeline runner. The runner is the only
+non-GET route, takes no input (no URLs or paths), and allows one run at a time; keep the server bound to
+`127.0.0.1`. A database built with older extraction rules is refused by `ingest` (shown on the page), so
+running the pipeline against `examples/final.sqlite3` will not work; use the default database.
 
 ## Configuration and changing the seed list
 
