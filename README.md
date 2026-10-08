@@ -43,7 +43,7 @@ Politics Stack Exchange (Cloudflare challenge), Quora (robots.txt).
 Requires Linux/macOS, Python 3.12 and [uv](https://docs.astral.sh/uv/).
 
 ```bash
-git clone <URL of this repository> media-intelligence && cd media-intelligence
+git clone https://github.com/Preet-Sethi-18/media-intelligence.git && cd media-intelligence
 uv sync --locked                       # dependencies + pinned spaCy model en_core_web_sm 3.8.0
 uv run crawl4ai-setup                  # Crawl4AI's browser setup
 uv run python -m playwright install --with-deps chromium   # browser + OS libraries (needs sudo for the OS part)
