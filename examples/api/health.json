@@ -1,0 +1,15 @@
+{
+  "request": "GET /health",
+  "status": 200,
+  "response": {
+    "status": "ok",
+    "version": "0.1.0",
+    "schema_version": 1,
+    "counts": {
+      "nodes": 558,
+      "edges": 1333,
+      "sources": 37,
+      "evidence": 1902
+    }
+  }
+}

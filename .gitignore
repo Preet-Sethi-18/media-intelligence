@@ -1,0 +1,38 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+sessions/
+browser-profiles/
+
+# Generated crawl data and SQLite files
+data/
+reports/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.log
+.crawl4ai/
+
+# Development caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local planning notes and the assignment brief are not part of the submission
+chatgpt/
+*.pdf
+# Final evidence database shipped with the submission
+!examples/final.sqlite3

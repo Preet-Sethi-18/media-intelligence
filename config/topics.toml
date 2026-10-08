@@ -1,0 +1,110 @@
+# Topic vocabulary (decisions D09 and D23): geopolitical topics for the Al Jazeera news source, AI-industry topics for
+# the Hacker News and Mastodon sources. Patterns match whole tokens case-insensitively with spaCy's PhraseMatcher, so
+# substrings never match ("electionsoftware" is not an election). A match whose head word is used as a verb ("trade
+# accusations", "they hacked it") is rejected, and overlapping matches keep the longest phrase ("trade war" is trade,
+# not military conflict). A pattern may belong to only one topic.
+# Known limits: a fixed vocabulary misses paraphrases and new themes, and noun senses outside the intended domain can
+# still overmatch (a sports "trade", a "war on drugs", an "acquisition" of weapons).
+# AI-topic patterns are deliberately multi-word or unambiguous: bare "model", "agents", "chips", "investment" and
+# "takeover" are left out because news text uses them in other senses ("business model", "FBI agents", "bargaining
+# chip", "trade and investment", "Taliban takeover"), and so is bare "hack" (on Hacker News usually a workaround).
+
+[[topics]]
+name = "diplomacy"
+patterns = ["diplomacy", "diplomatic relations", "diplomatic ties", "diplomatic efforts", "diplomatic solution",
+            "peace talks", "peace process", "peace deal", "peace plan", "peace agreement", "mediation"]
+
+[[topics]]
+name = "sanctions"
+patterns = ["sanctions", "sanction", "embargo", "embargoes", "arms embargo", "export controls", "asset freeze",
+            "asset freezes"]
+
+[[topics]]
+name = "ceasefire"
+patterns = ["ceasefire", "ceasefires", "cease-fire", "truce", "armistice", "humanitarian pause",
+            "cessation of hostilities"]
+
+[[topics]]
+name = "trade"
+patterns = ["trade", "trade deal", "trade war", "trade talks", "trade agreement", "free trade", "tariff",
+            "tariffs", "exports", "imports"]
+
+[[topics]]
+name = "migration"
+patterns = ["migration", "migrant", "migrants", "immigration", "immigrants", "refugee", "refugees", "asylum",
+            "asylum seekers", "deportation", "deportations", "border crossings"]
+
+[[topics]]
+name = "elections"
+patterns = ["election", "elections", "electoral", "referendum", "election campaign"]
+
+[[topics]]
+name = "military conflict"
+patterns = ["military conflict", "armed conflict", "war", "wars", "warfare", "invasion", "airstrike", "airstrikes",
+            "air strike", "air strikes", "missile strike", "missile strikes", "drone strike", "drone strikes",
+            "military offensive", "ground offensive", "military operation", "hostilities", "shelling",
+            "bombardment"]
+
+[[topics]]
+name = "nuclear programme"
+patterns = ["nuclear programme", "nuclear program", "uranium enrichment", "enriched uranium", "enrichment",
+            "nuclear deal", "nuclear talks", "nuclear weapons", "nuclear weapon", "nuclear facilities",
+            "nuclear sites", "JCPOA"]
+
+# AI-industry topics
+
+[[topics]]
+name = "ai models"
+patterns = ["ai model", "ai models", "language model", "language models", "large language model",
+            "large language models", "llm", "llms", "frontier model", "frontier models", "foundation model",
+            "foundation models", "open-weight model", "open-weight models", "open weights", "reasoning model",
+            "reasoning models", "chatbot", "chatbots", "generative ai", "genai"]
+
+[[topics]]
+name = "ai safety"
+patterns = ["ai safety", "safety tests", "safety testing", "ai alignment", "existential risk", "x-risk",
+            "human extinction", "ai risk", "ai risks", "catastrophic risk", "catastrophic risks", "catastrophic harm",
+            "red teaming", "jailbreak", "jailbreaks"]
+
+[[topics]]
+name = "tech regulation"
+patterns = ["ai regulation", "ai regulations", "ai act", "ai policy", "ai legislation", "ai governance", "ai rules",
+            "regulatory capture", "antitrust", "antitrust case", "antitrust lawsuit", "self-regulation"]
+
+[[topics]]
+name = "funding and deals"
+patterns = ["acquisition", "acquisitions", "merger", "mergers", "ipo", "ipos", "initial public offering",
+            "funding round", "funding rounds", "seed round", "series a", "series b", "series c", "valuation",
+            "valuations", "venture capital", "fundraising", "fundraise"]
+
+[[topics]]
+name = "chips and compute"
+patterns = ["semiconductor", "semiconductors", "gpu", "gpus", "tpu", "tpus", "ai chip", "ai chips",
+            "computer chips", "chip export", "chip exports", "chipmaker", "chipmakers", "chip industry", "foundry",
+            "foundries", "data center", "data centers", "data centre", "data centres", "datacenter", "datacenters"]
+
+[[topics]]
+name = "ai agents"
+patterns = ["ai agent", "ai agents", "agentic", "agentic ai", "autonomous agent", "autonomous agents",
+            "coding agent", "coding agents"]
+
+[[topics]]
+name = "jobs and layoffs"
+patterns = ["layoff", "layoffs", "job cuts", "job losses", "job loss", "unemployment", "hiring freeze",
+            "job displacement", "workforce reduction"]
+
+[[topics]]
+name = "copyright"
+patterns = ["copyright", "copyrights", "copyrighted", "copyright infringement", "fair use", "intellectual property",
+            "ip theft"]
+
+[[topics]]
+name = "cybersecurity"
+patterns = ["cybersecurity", "cyber security", "cyberattack", "cyberattacks", "cyber attack", "cyber attacks",
+            "cyberoperations", "cyber operations", "cybercrime", "cybercrimes", "hacking", "ddos",
+            "malware", "ransomware", "data breach", "data breaches"]
+
+[[topics]]
+name = "stock markets"
+patterns = ["stock market", "stock markets", "stock price", "stock prices", "share price", "share prices",
+            "market cap", "market capitalization", "market capitalisation", "ai bubble", "stock tick"]

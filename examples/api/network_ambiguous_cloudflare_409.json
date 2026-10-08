@@ -1,0 +1,25 @@
+{
+  "request": "GET /entity/Cloudflare/network",
+  "status": 409,
+  "response": {
+    "error": {
+      "code": "ambiguous_entity",
+      "message": "2 entities match 'Cloudflare'; pass entity_id to choose one",
+      "request_id": "82d19ac16c6743d8a6ab42f64a6ce062",
+      "candidates": [
+        {
+          "id": "376",
+          "name": "Cloudflare",
+          "type": "ORG",
+          "mention_count": 1
+        },
+        {
+          "id": "410",
+          "name": "Cloudflare",
+          "type": "LOCATION",
+          "mention_count": 1
+        }
+      ]
+    }
+  }
+}

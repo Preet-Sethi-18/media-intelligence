@@ -1,0 +1,53 @@
+{
+  "request": "GET /edges/8/sources",
+  "status": 200,
+  "response": {
+    "edge": {
+      "id": "8",
+      "source": {
+        "id": "6",
+        "name": "United Nations",
+        "type": "ORG",
+        "mention_count": 4
+      },
+      "target": {
+        "id": "2",
+        "name": "Iran",
+        "type": "LOCATION",
+        "mention_count": 16
+      },
+      "relation_type": "sanctioned",
+      "directed": true,
+      "weight": 1,
+      "first_seen": "2026-10-07T19:55:22.116872Z",
+      "last_seen": "2026-10-07T20:07:42.146884Z"
+    },
+    "items": [
+      {
+        "evidence_id": "8",
+        "source_id": "1",
+        "source_url": "https://www.aljazeera.com/news/2026/9/17/what-are-all-the-sanctions-iran-is-under",
+        "source_type": "news",
+        "title": "What are all the sanctions Iran is under?",
+        "author": "Al Jazeera Staff",
+        "published_at": "2026-09-17T15:01:27.000000Z",
+        "scraped_at": "2026-10-07T19:55:21.626232Z",
+        "last_scraped_at": "2026-10-07T20:07:42.146884Z",
+        "observed_at": "2026-10-07T19:55:22.116872Z",
+        "evidence_text": "UN sanctions were officially reimposed against Iran in September 2025 when France, Germany and the United Kingdom triggered the “snapback” mechanism under UN Security Council Resolution 2231.",
+        "segment_id": "body",
+        "segment_kind": "body",
+        "segment_author": "Al Jazeera Staff",
+        "segment_url": "https://www.aljazeera.com/news/2026/9/17/what-are-all-the-sanctions-iran-is-under",
+        "segment_published_at": null,
+        "start_offset": 530,
+        "end_offset": 721,
+        "rule_id": "sanctioned.imposed",
+        "quality_tier": "semantic_rule"
+      }
+    ],
+    "total": 1,
+    "limit": 20,
+    "offset": 0
+  }
+}

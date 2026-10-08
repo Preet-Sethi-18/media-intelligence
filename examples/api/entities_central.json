@@ -1,0 +1,179 @@
+{
+  "request": "GET /entities/central?limit=15",
+  "status": 200,
+  "response": {
+    "metric": "normalized_degree",
+    "definition": "score = degree / (N - 1) for N > 1, else 0; degree = distinct neighbours over incoming and outgoing edges, ignoring direction and relation type; N counts every node, isolated ones too",
+    "node_count": 558,
+    "items": [
+      {
+        "rank": 1,
+        "node_id": "3",
+        "name": "United States",
+        "type": "LOCATION",
+        "score": 0.289048473967684,
+        "degree": 161,
+        "relation_type_count": 5,
+        "weighted_degree": 309,
+        "mention_count": 26
+      },
+      {
+        "rank": 2,
+        "node_id": "2",
+        "name": "Iran",
+        "type": "LOCATION",
+        "score": 0.21364452423698385,
+        "degree": 119,
+        "relation_type_count": 5,
+        "weighted_degree": 258,
+        "mention_count": 16
+      },
+      {
+        "rank": 3,
+        "node_id": "131",
+        "name": "Al Jazeera",
+        "type": "ORG",
+        "score": 0.08797127468581688,
+        "degree": 49,
+        "relation_type_count": 3,
+        "weighted_degree": 69,
+        "mention_count": 11
+      },
+      {
+        "rank": 4,
+        "node_id": "109",
+        "name": "Donald Trump",
+        "type": "PERSON",
+        "score": 0.08797127468581688,
+        "degree": 49,
+        "relation_type_count": 2,
+        "weighted_degree": 83,
+        "mention_count": 12
+      },
+      {
+        "rank": 5,
+        "node_id": "149",
+        "name": "Anthropic",
+        "type": "ORG",
+        "score": 0.08258527827648116,
+        "degree": 46,
+        "relation_type_count": 2,
+        "weighted_degree": 63,
+        "mention_count": 9
+      },
+      {
+        "rank": 6,
+        "node_id": "135",
+        "name": "Strait of Hormuz",
+        "type": "LOCATION",
+        "score": 0.0807899461400359,
+        "degree": 45,
+        "relation_type_count": 1,
+        "weighted_degree": 90,
+        "mention_count": 10
+      },
+      {
+        "rank": 7,
+        "node_id": "53",
+        "name": "China",
+        "type": "LOCATION",
+        "score": 0.0807899461400359,
+        "degree": 45,
+        "relation_type_count": 1,
+        "weighted_degree": 60,
+        "mention_count": 8
+      },
+      {
+        "rank": 8,
+        "node_id": "12",
+        "name": "military conflict",
+        "type": "TOPIC",
+        "score": 0.07899461400359066,
+        "degree": 44,
+        "relation_type_count": 1,
+        "weighted_degree": 91,
+        "mention_count": 15
+      },
+      {
+        "rank": 9,
+        "node_id": "111",
+        "name": "Washington",
+        "type": "LOCATION",
+        "score": 0.06822262118491922,
+        "degree": 38,
+        "relation_type_count": 1,
+        "weighted_degree": 58,
+        "mention_count": 10
+      },
+      {
+        "rank": 10,
+        "node_id": "85",
+        "name": "OpenAI",
+        "type": "ORG",
+        "score": 0.06642728904847396,
+        "degree": 37,
+        "relation_type_count": 1,
+        "weighted_degree": 63,
+        "mention_count": 13
+      },
+      {
+        "rank": 11,
+        "node_id": "119",
+        "name": "Tehran",
+        "type": "LOCATION",
+        "score": 0.06463195691202872,
+        "degree": 36,
+        "relation_type_count": 2,
+        "weighted_degree": 71,
+        "mention_count": 8
+      },
+      {
+        "rank": 12,
+        "node_id": "8",
+        "name": "France",
+        "type": "LOCATION",
+        "score": 0.059245960502693,
+        "degree": 33,
+        "relation_type_count": 1,
+        "weighted_degree": 39,
+        "mention_count": 5
+      },
+      {
+        "rank": 13,
+        "node_id": "23",
+        "name": "Nvidia",
+        "type": "ORG",
+        "score": 0.05745062836624776,
+        "degree": 32,
+        "relation_type_count": 3,
+        "weighted_degree": 46,
+        "mention_count": 8
+      },
+      {
+        "rank": 14,
+        "node_id": "115",
+        "name": "Oman",
+        "type": "LOCATION",
+        "score": 0.05206463195691203,
+        "degree": 29,
+        "relation_type_count": 1,
+        "weighted_degree": 41,
+        "mention_count": 7
+      },
+      {
+        "rank": 15,
+        "node_id": "262",
+        "name": "Saudi Arabia",
+        "type": "LOCATION",
+        "score": 0.05206463195691203,
+        "degree": 29,
+        "relation_type_count": 1,
+        "weighted_degree": 39,
+        "mention_count": 6
+      }
+    ],
+    "total": 558,
+    "limit": 15,
+    "offset": 0
+  }
+}

@@ -1,0 +1,537 @@
+{
+  "request": "GET /connections/new?since=2026-10-07T20:10:40Z&limit=20",
+  "status": 200,
+  "response": {
+    "since": "2026-10-07T20:10:40.000000Z",
+    "as_of": "2026-10-07T20:14:03.128313Z",
+    "thresholds": {
+      "min_delta": 3,
+      "min_ratio": 0.5
+    },
+    "items": [
+      {
+        "edge_id": "29",
+        "source": {
+          "id": "3",
+          "name": "United States",
+          "type": "LOCATION",
+          "mention_count": 26
+        },
+        "target": {
+          "id": "12",
+          "name": "military conflict",
+          "type": "TOPIC",
+          "mention_count": 15
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:13:28.445545Z",
+        "reason": "grown",
+        "weight_before": 8,
+        "weight_now": 13,
+        "weight_delta": 5,
+        "relative_growth": 0.625,
+        "latest_contribution": "2026-10-07T20:13:28.445545Z",
+        "evidence_url": "/edges/29/sources"
+      },
+      {
+        "edge_id": "30",
+        "source": {
+          "id": "2",
+          "name": "Iran",
+          "type": "LOCATION",
+          "mention_count": 16
+        },
+        "target": {
+          "id": "12",
+          "name": "military conflict",
+          "type": "TOPIC",
+          "mention_count": 15
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:13:28.445545Z",
+        "reason": "grown",
+        "weight_before": 8,
+        "weight_now": 13,
+        "weight_delta": 5,
+        "relative_growth": 0.625,
+        "latest_contribution": "2026-10-07T20:13:28.445545Z",
+        "evidence_url": "/edges/30/sources"
+      },
+      {
+        "edge_id": "145",
+        "source": {
+          "id": "3",
+          "name": "United States",
+          "type": "LOCATION",
+          "mention_count": 26
+        },
+        "target": {
+          "id": "109",
+          "name": "Donald Trump",
+          "type": "PERSON",
+          "mention_count": 12
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:28.445545Z",
+        "reason": "grown",
+        "weight_before": 6,
+        "weight_now": 11,
+        "weight_delta": 5,
+        "relative_growth": 0.8333333333333334,
+        "latest_contribution": "2026-10-07T20:13:28.445545Z",
+        "evidence_url": "/edges/145/sources"
+      },
+      {
+        "edge_id": "270",
+        "source": {
+          "id": "85",
+          "name": "OpenAI",
+          "type": "ORG",
+          "mention_count": 13
+        },
+        "target": {
+          "id": "149",
+          "name": "Anthropic",
+          "type": "ORG",
+          "mention_count": 9
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:56:01.772923Z",
+        "last_seen": "2026-10-07T20:12:45.710494Z",
+        "reason": "grown",
+        "weight_before": 2,
+        "weight_now": 7,
+        "weight_delta": 5,
+        "relative_growth": 2.5,
+        "latest_contribution": "2026-10-07T20:12:45.710494Z",
+        "evidence_url": "/edges/270/sources"
+      },
+      {
+        "edge_id": "260",
+        "source": {
+          "id": "3",
+          "name": "United States",
+          "type": "LOCATION",
+          "mention_count": 26
+        },
+        "target": {
+          "id": "131",
+          "name": "Al Jazeera",
+          "type": "ORG",
+          "mention_count": 11
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "reason": "grown",
+        "weight_before": 4,
+        "weight_now": 8,
+        "weight_delta": 4,
+        "relative_growth": 1.0,
+        "latest_contribution": "2026-10-07T20:12:45.710494Z",
+        "evidence_url": "/edges/260/sources"
+      },
+      {
+        "edge_id": "294",
+        "source": {
+          "id": "36",
+          "name": "Google",
+          "type": "ORG",
+          "mention_count": 8
+        },
+        "target": {
+          "id": "149",
+          "name": "Anthropic",
+          "type": "ORG",
+          "mention_count": 9
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:56:01.772923Z",
+        "last_seen": "2026-10-07T20:12:45.710494Z",
+        "reason": "grown",
+        "weight_before": 1,
+        "weight_now": 5,
+        "weight_delta": 4,
+        "relative_growth": 4.0,
+        "latest_contribution": "2026-10-07T20:12:45.710494Z",
+        "evidence_url": "/edges/294/sources"
+      },
+      {
+        "edge_id": "1007",
+        "source": {
+          "id": "36",
+          "name": "Google",
+          "type": "ORG",
+          "mention_count": 8
+        },
+        "target": {
+          "id": "85",
+          "name": "OpenAI",
+          "type": "ORG",
+          "mention_count": 13
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T20:11:25.510667Z",
+        "last_seen": "2026-10-07T20:12:45.710494Z",
+        "reason": "new",
+        "weight_before": 0,
+        "weight_now": 4,
+        "weight_delta": 4,
+        "relative_growth": null,
+        "latest_contribution": "2026-10-07T20:12:45.710494Z",
+        "evidence_url": "/edges/1007/sources"
+      },
+      {
+        "edge_id": "189",
+        "source": {
+          "id": "2",
+          "name": "Iran",
+          "type": "LOCATION",
+          "mention_count": 16
+        },
+        "target": {
+          "id": "119",
+          "name": "Tehran",
+          "type": "LOCATION",
+          "mention_count": 8
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "reason": "grown",
+        "weight_before": 4,
+        "weight_now": 8,
+        "weight_delta": 4,
+        "relative_growth": 1.0,
+        "latest_contribution": "2026-10-07T20:12:14.713913Z",
+        "evidence_url": "/edges/189/sources"
+      },
+      {
+        "edge_id": "350",
+        "source": {
+          "id": "2",
+          "name": "Iran",
+          "type": "LOCATION",
+          "mention_count": 16
+        },
+        "target": {
+          "id": "135",
+          "name": "Strait of Hormuz",
+          "type": "LOCATION",
+          "mention_count": 10
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:56:16.175316Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "reason": "grown",
+        "weight_before": 5,
+        "weight_now": 9,
+        "weight_delta": 4,
+        "relative_growth": 0.8,
+        "latest_contribution": "2026-10-07T20:12:14.713913Z",
+        "evidence_url": "/edges/350/sources"
+      },
+      {
+        "edge_id": "144",
+        "source": {
+          "id": "2",
+          "name": "Iran",
+          "type": "LOCATION",
+          "mention_count": 16
+        },
+        "target": {
+          "id": "3",
+          "name": "United States",
+          "type": "LOCATION",
+          "mention_count": 26
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:28.445545Z",
+        "reason": "grown",
+        "weight_before": 5,
+        "weight_now": 8,
+        "weight_delta": 3,
+        "relative_growth": 0.6,
+        "latest_contribution": "2026-10-07T20:13:28.445545Z",
+        "evidence_url": "/edges/144/sources"
+      },
+      {
+        "edge_id": "476",
+        "source": {
+          "id": "2",
+          "name": "Iran",
+          "type": "LOCATION",
+          "mention_count": 16
+        },
+        "target": {
+          "id": "109",
+          "name": "Donald Trump",
+          "type": "PERSON",
+          "mention_count": 12
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:13:28.445545Z",
+        "reason": "grown",
+        "weight_before": 3,
+        "weight_now": 6,
+        "weight_delta": 3,
+        "relative_growth": 1.0,
+        "latest_contribution": "2026-10-07T20:13:28.445545Z",
+        "evidence_url": "/edges/476/sources"
+      },
+      {
+        "edge_id": "441",
+        "source": {
+          "id": "3",
+          "name": "United States",
+          "type": "LOCATION",
+          "mention_count": 26
+        },
+        "target": {
+          "id": "85",
+          "name": "OpenAI",
+          "type": "ORG",
+          "mention_count": 13
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:56:28.757622Z",
+        "last_seen": "2026-10-07T20:13:22.065946Z",
+        "reason": "grown",
+        "weight_before": 1,
+        "weight_now": 4,
+        "weight_delta": 3,
+        "relative_growth": 3.0,
+        "latest_contribution": "2026-10-07T20:13:22.065946Z",
+        "evidence_url": "/edges/441/sources"
+      },
+      {
+        "edge_id": "1",
+        "source": {
+          "id": "1",
+          "name": "sanctions",
+          "type": "TOPIC",
+          "mention_count": 9
+        },
+        "target": {
+          "id": "2",
+          "name": "Iran",
+          "type": "LOCATION",
+          "mention_count": 16
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "reason": "grown",
+        "weight_before": 4,
+        "weight_now": 7,
+        "weight_delta": 3,
+        "relative_growth": 0.75,
+        "latest_contribution": "2026-10-07T20:12:14.713913Z",
+        "evidence_url": "/edges/1/sources"
+      },
+      {
+        "edge_id": "28",
+        "source": {
+          "id": "1",
+          "name": "sanctions",
+          "type": "TOPIC",
+          "mention_count": 9
+        },
+        "target": {
+          "id": "3",
+          "name": "United States",
+          "type": "LOCATION",
+          "mention_count": 26
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "reason": "grown",
+        "weight_before": 4,
+        "weight_now": 7,
+        "weight_delta": 3,
+        "relative_growth": 0.75,
+        "latest_contribution": "2026-10-07T20:12:14.713913Z",
+        "evidence_url": "/edges/28/sources"
+      },
+      {
+        "edge_id": "178",
+        "source": {
+          "id": "111",
+          "name": "Washington",
+          "type": "LOCATION",
+          "mention_count": 10
+        },
+        "target": {
+          "id": "119",
+          "name": "Tehran",
+          "type": "LOCATION",
+          "mention_count": 8
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:06.524772Z",
+        "reason": "grown",
+        "weight_before": 2,
+        "weight_now": 5,
+        "weight_delta": 3,
+        "relative_growth": 1.5,
+        "latest_contribution": "2026-10-07T20:12:14.713913Z",
+        "evidence_url": "/edges/178/sources"
+      },
+      {
+        "edge_id": "355",
+        "source": {
+          "id": "3",
+          "name": "United States",
+          "type": "LOCATION",
+          "mention_count": 26
+        },
+        "target": {
+          "id": "196",
+          "name": "Israel",
+          "type": "LOCATION",
+          "mention_count": 10
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:56:16.175316Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "reason": "grown",
+        "weight_before": 5,
+        "weight_now": 8,
+        "weight_delta": 3,
+        "relative_growth": 0.6,
+        "latest_contribution": "2026-10-07T20:12:14.713913Z",
+        "evidence_url": "/edges/355/sources"
+      },
+      {
+        "edge_id": "356",
+        "source": {
+          "id": "12",
+          "name": "military conflict",
+          "type": "TOPIC",
+          "mention_count": 15
+        },
+        "target": {
+          "id": "196",
+          "name": "Israel",
+          "type": "LOCATION",
+          "mention_count": 10
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T19:56:16.175316Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "reason": "grown",
+        "weight_before": 4,
+        "weight_now": 7,
+        "weight_delta": 3,
+        "relative_growth": 0.75,
+        "latest_contribution": "2026-10-07T20:12:14.713913Z",
+        "evidence_url": "/edges/356/sources"
+      },
+      {
+        "edge_id": "473",
+        "source": {
+          "id": "3",
+          "name": "United States",
+          "type": "LOCATION",
+          "mention_count": 26
+        },
+        "target": {
+          "id": "265",
+          "name": "ceasefire",
+          "type": "TOPIC",
+          "mention_count": 6
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:12:49.762775Z",
+        "reason": "grown",
+        "weight_before": 2,
+        "weight_now": 5,
+        "weight_delta": 3,
+        "relative_growth": 1.5,
+        "latest_contribution": "2026-10-07T20:12:14.713913Z",
+        "evidence_url": "/edges/473/sources"
+      },
+      {
+        "edge_id": "477",
+        "source": {
+          "id": "2",
+          "name": "Iran",
+          "type": "LOCATION",
+          "mention_count": 16
+        },
+        "target": {
+          "id": "265",
+          "name": "ceasefire",
+          "type": "TOPIC",
+          "mention_count": 6
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "reason": "grown",
+        "weight_before": 2,
+        "weight_now": 5,
+        "weight_delta": 3,
+        "relative_growth": 1.5,
+        "latest_contribution": "2026-10-07T20:12:14.713913Z",
+        "evidence_url": "/edges/477/sources"
+      },
+      {
+        "edge_id": "503",
+        "source": {
+          "id": "2",
+          "name": "Iran",
+          "type": "LOCATION",
+          "mention_count": 16
+        },
+        "target": {
+          "id": "15",
+          "name": "Islamic Revolutionary Guard Corps",
+          "type": "ORG",
+          "mention_count": 8
+        },
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "reason": "grown",
+        "weight_before": 4,
+        "weight_now": 7,
+        "weight_delta": 3,
+        "relative_growth": 0.75,
+        "latest_contribution": "2026-10-07T20:12:14.713913Z",
+        "evidence_url": "/edges/503/sources"
+      }
+    ],
+    "total": 450,
+    "limit": 20,
+    "offset": 0
+  }
+}

@@ -1,0 +1,1178 @@
+{
+  "request": "GET /entity/Iran/network?depth=2&max_nodes=40&max_edges=80",
+  "status": 200,
+  "response": {
+    "root_id": "2",
+    "depth": 2,
+    "nodes": [
+      {
+        "id": "2",
+        "name": "Iran",
+        "type": "LOCATION",
+        "mention_count": 16,
+        "distance": 0
+      },
+      {
+        "id": "3",
+        "name": "United States",
+        "type": "LOCATION",
+        "mention_count": 26,
+        "distance": 1
+      },
+      {
+        "id": "12",
+        "name": "military conflict",
+        "type": "TOPIC",
+        "mention_count": 15,
+        "distance": 1
+      },
+      {
+        "id": "7",
+        "name": "trade",
+        "type": "TOPIC",
+        "mention_count": 13,
+        "distance": 1
+      },
+      {
+        "id": "109",
+        "name": "Donald Trump",
+        "type": "PERSON",
+        "mention_count": 12,
+        "distance": 1
+      },
+      {
+        "id": "131",
+        "name": "Al Jazeera",
+        "type": "ORG",
+        "mention_count": 11,
+        "distance": 1
+      },
+      {
+        "id": "111",
+        "name": "Washington",
+        "type": "LOCATION",
+        "mention_count": 10,
+        "distance": 1
+      },
+      {
+        "id": "135",
+        "name": "Strait of Hormuz",
+        "type": "LOCATION",
+        "mention_count": 10,
+        "distance": 1
+      },
+      {
+        "id": "196",
+        "name": "Israel",
+        "type": "LOCATION",
+        "mention_count": 10,
+        "distance": 1
+      },
+      {
+        "id": "1",
+        "name": "sanctions",
+        "type": "TOPIC",
+        "mention_count": 9,
+        "distance": 1
+      },
+      {
+        "id": "138",
+        "name": "US Central Command",
+        "type": "ORG",
+        "mention_count": 9,
+        "distance": 1
+      },
+      {
+        "id": "5",
+        "name": "United Kingdom",
+        "type": "LOCATION",
+        "mention_count": 8,
+        "distance": 1
+      },
+      {
+        "id": "15",
+        "name": "Islamic Revolutionary Guard Corps",
+        "type": "ORG",
+        "mention_count": 8,
+        "distance": 1
+      },
+      {
+        "id": "53",
+        "name": "China",
+        "type": "LOCATION",
+        "mention_count": 8,
+        "distance": 1
+      },
+      {
+        "id": "119",
+        "name": "Tehran",
+        "type": "LOCATION",
+        "mention_count": 8,
+        "distance": 1
+      },
+      {
+        "id": "115",
+        "name": "Oman",
+        "type": "LOCATION",
+        "mention_count": 7,
+        "distance": 1
+      },
+      {
+        "id": "258",
+        "name": "Gulf",
+        "type": "LOCATION",
+        "mention_count": 7,
+        "distance": 1
+      },
+      {
+        "id": "13",
+        "name": "US Department of the Treasury",
+        "type": "ORG",
+        "mention_count": 6,
+        "distance": 1
+      },
+      {
+        "id": "262",
+        "name": "Saudi Arabia",
+        "type": "LOCATION",
+        "mention_count": 6,
+        "distance": 1
+      },
+      {
+        "id": "265",
+        "name": "ceasefire",
+        "type": "TOPIC",
+        "mention_count": 6,
+        "distance": 1
+      },
+      {
+        "id": "8",
+        "name": "France",
+        "type": "LOCATION",
+        "mention_count": 5,
+        "distance": 1
+      },
+      {
+        "id": "136",
+        "name": "Mohammad Bagher Ghalibaf",
+        "type": "PERSON",
+        "mention_count": 5,
+        "distance": 1
+      },
+      {
+        "id": "259",
+        "name": "Ali Khamenei",
+        "type": "PERSON",
+        "mention_count": 5,
+        "distance": 1
+      },
+      {
+        "id": "272",
+        "name": "Qatar",
+        "type": "LOCATION",
+        "mention_count": 5,
+        "distance": 1
+      },
+      {
+        "id": "285",
+        "name": "Reuters",
+        "type": "ORG",
+        "mention_count": 5,
+        "distance": 1
+      },
+      {
+        "id": "6",
+        "name": "United Nations",
+        "type": "ORG",
+        "mention_count": 4,
+        "distance": 1
+      },
+      {
+        "id": "9",
+        "name": "Germany",
+        "type": "LOCATION",
+        "mention_count": 4,
+        "distance": 1
+      },
+      {
+        "id": "11",
+        "name": "nuclear programme",
+        "type": "TOPIC",
+        "mention_count": 4,
+        "distance": 1
+      },
+      {
+        "id": "110",
+        "name": "diplomacy",
+        "type": "TOPIC",
+        "mention_count": 4,
+        "distance": 1
+      },
+      {
+        "id": "194",
+        "name": "NATO",
+        "type": "ORG",
+        "mention_count": 4,
+        "distance": 1
+      },
+      {
+        "id": "270",
+        "name": "Bahrain",
+        "type": "LOCATION",
+        "mention_count": 4,
+        "distance": 1
+      },
+      {
+        "id": "271",
+        "name": "Kuwait",
+        "type": "LOCATION",
+        "mention_count": 4,
+        "distance": 1
+      },
+      {
+        "id": "290",
+        "name": "Lebanon",
+        "type": "LOCATION",
+        "mention_count": 4,
+        "distance": 1
+      },
+      {
+        "id": "4",
+        "name": "European Union",
+        "type": "ORG",
+        "mention_count": 3,
+        "distance": 1
+      },
+      {
+        "id": "22",
+        "name": "Switzerland",
+        "type": "LOCATION",
+        "mention_count": 3,
+        "distance": 1
+      },
+      {
+        "id": "112",
+        "name": "Middle East",
+        "type": "LOCATION",
+        "mention_count": 3,
+        "distance": 1
+      },
+      {
+        "id": "113",
+        "name": "Abbas Araghchi",
+        "type": "PERSON",
+        "mention_count": 3,
+        "distance": 1
+      },
+      {
+        "id": "125",
+        "name": "Foreign Ministry (Iran)",
+        "type": "ORG",
+        "mention_count": 3,
+        "distance": 1
+      },
+      {
+        "id": "139",
+        "name": "Tim Hawkins",
+        "type": "PERSON",
+        "mention_count": 3,
+        "distance": 1
+      },
+      {
+        "id": "191",
+        "name": "Russia",
+        "type": "LOCATION",
+        "mention_count": 3,
+        "distance": 1
+      }
+    ],
+    "edges": [
+      {
+        "id": "30",
+        "source": "2",
+        "target": "12",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 13,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:13:28.445545Z",
+        "evidence_url": "/edges/30/sources"
+      },
+      {
+        "id": "350",
+        "source": "2",
+        "target": "135",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 9,
+        "first_seen": "2026-10-07T19:56:16.175316Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/350/sources"
+      },
+      {
+        "id": "144",
+        "source": "2",
+        "target": "3",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 8,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:28.445545Z",
+        "evidence_url": "/edges/144/sources"
+      },
+      {
+        "id": "189",
+        "source": "2",
+        "target": "119",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 8,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/189/sources"
+      },
+      {
+        "id": "1",
+        "source": "1",
+        "target": "2",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 7,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/1/sources"
+      },
+      {
+        "id": "503",
+        "source": "2",
+        "target": "15",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 7,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/503/sources"
+      },
+      {
+        "id": "149",
+        "source": "2",
+        "target": "111",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 6,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/149/sources"
+      },
+      {
+        "id": "476",
+        "source": "2",
+        "target": "109",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 6,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:13:28.445545Z",
+        "evidence_url": "/edges/476/sources"
+      },
+      {
+        "id": "167",
+        "source": "2",
+        "target": "115",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 5,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/167/sources"
+      },
+      {
+        "id": "461",
+        "source": "2",
+        "target": "258",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 5,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/461/sources"
+      },
+      {
+        "id": "462",
+        "source": "2",
+        "target": "259",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 5,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/462/sources"
+      },
+      {
+        "id": "477",
+        "source": "2",
+        "target": "265",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 5,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/477/sources"
+      },
+      {
+        "id": "538",
+        "source": "2",
+        "target": "138",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 5,
+        "first_seen": "2026-10-07T20:02:37.526035Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/538/sources"
+      },
+      {
+        "id": "41",
+        "source": "2",
+        "target": "11",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 4,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/41/sources"
+      },
+      {
+        "id": "235",
+        "source": "2",
+        "target": "136",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 4,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/235/sources"
+      },
+      {
+        "id": "254",
+        "source": "2",
+        "target": "13",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 4,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/254/sources"
+      },
+      {
+        "id": "354",
+        "source": "2",
+        "target": "196",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 4,
+        "first_seen": "2026-10-07T19:56:16.175316Z",
+        "last_seen": "2026-10-07T20:13:06.524772Z",
+        "evidence_url": "/edges/354/sources"
+      },
+      {
+        "id": "545",
+        "source": "3",
+        "target": "2",
+        "relation_type": "attacked",
+        "directed": true,
+        "weight": 4,
+        "first_seen": "2026-10-07T20:02:37.526035Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/545/sources"
+      },
+      {
+        "id": "596",
+        "source": "196",
+        "target": "2",
+        "relation_type": "attacked",
+        "directed": true,
+        "weight": 4,
+        "first_seen": "2026-10-07T20:03:08.313433Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/596/sources"
+      },
+      {
+        "id": "621",
+        "source": "2",
+        "target": "131",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 4,
+        "first_seen": "2026-10-07T20:03:08.313433Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/621/sources"
+      },
+      {
+        "id": "26",
+        "source": "2",
+        "target": "7",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/26/sources"
+      },
+      {
+        "id": "148",
+        "source": "2",
+        "target": "110",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/148/sources"
+      },
+      {
+        "id": "150",
+        "source": "2",
+        "target": "112",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/150/sources"
+      },
+      {
+        "id": "165",
+        "source": "2",
+        "target": "113",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/165/sources"
+      },
+      {
+        "id": "206",
+        "source": "2",
+        "target": "125",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/206/sources"
+      },
+      {
+        "id": "486",
+        "source": "2",
+        "target": "270",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:13:06.524772Z",
+        "evidence_url": "/edges/486/sources"
+      },
+      {
+        "id": "487",
+        "source": "2",
+        "target": "271",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:13:06.524772Z",
+        "evidence_url": "/edges/487/sources"
+      },
+      {
+        "id": "551",
+        "source": "2",
+        "target": "290",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T20:02:37.526035Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/551/sources"
+      },
+      {
+        "id": "555",
+        "source": "2",
+        "target": "272",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T20:02:37.526035Z",
+        "last_seen": "2026-10-07T20:13:06.524772Z",
+        "evidence_url": "/edges/555/sources"
+      },
+      {
+        "id": "605",
+        "source": "2",
+        "target": "262",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T20:03:08.313433Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/605/sources"
+      },
+      {
+        "id": "17",
+        "source": "2",
+        "target": "8",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 2,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:12:14.713913Z",
+        "evidence_url": "/edges/17/sources"
+      },
+      {
+        "id": "593",
+        "source": "2",
+        "target": "194",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 2,
+        "first_seen": "2026-10-07T20:03:08.313433Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/593/sources"
+      },
+      {
+        "id": "8",
+        "source": "6",
+        "target": "2",
+        "relation_type": "sanctioned",
+        "directed": true,
+        "weight": 1,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:07:42.146884Z",
+        "evidence_url": "/edges/8/sources"
+      },
+      {
+        "id": "18",
+        "source": "2",
+        "target": "9",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 1,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:07:42.146884Z",
+        "evidence_url": "/edges/18/sources"
+      },
+      {
+        "id": "27",
+        "source": "3",
+        "target": "2",
+        "relation_type": "sanctioned",
+        "directed": true,
+        "weight": 1,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:07:42.146884Z",
+        "evidence_url": "/edges/27/sources"
+      },
+      {
+        "id": "39",
+        "source": "4",
+        "target": "2",
+        "relation_type": "sanctioned",
+        "directed": true,
+        "weight": 1,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:07:42.146884Z",
+        "evidence_url": "/edges/39/sources"
+      },
+      {
+        "id": "42",
+        "source": "5",
+        "target": "2",
+        "relation_type": "sanctioned",
+        "directed": true,
+        "weight": 1,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:07:42.146884Z",
+        "evidence_url": "/edges/42/sources"
+      },
+      {
+        "id": "147",
+        "source": "2",
+        "target": "22",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 1,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:08:05.513614Z",
+        "evidence_url": "/edges/147/sources"
+      },
+      {
+        "id": "200",
+        "source": "109",
+        "target": "2",
+        "relation_type": "criticized",
+        "directed": true,
+        "weight": 1,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:08:05.513614Z",
+        "evidence_url": "/edges/200/sources"
+      },
+      {
+        "id": "485",
+        "source": "3",
+        "target": "2",
+        "relation_type": "criticized",
+        "directed": true,
+        "weight": 1,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:12:49.762775Z",
+        "evidence_url": "/edges/485/sources"
+      },
+      {
+        "id": "536",
+        "source": "2",
+        "target": "3",
+        "relation_type": "attacked",
+        "directed": true,
+        "weight": 1,
+        "first_seen": "2026-10-07T20:02:37.526035Z",
+        "last_seen": "2026-10-07T20:13:06.524772Z",
+        "evidence_url": "/edges/536/sources"
+      },
+      {
+        "id": "659",
+        "source": "2",
+        "target": "6",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 1,
+        "first_seen": "2026-10-07T20:03:08.313433Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/659/sources"
+      },
+      {
+        "id": "692",
+        "source": "2",
+        "target": "270",
+        "relation_type": "attacked",
+        "directed": true,
+        "weight": 1,
+        "first_seen": "2026-10-07T20:03:08.313433Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/692/sources"
+      },
+      {
+        "id": "693",
+        "source": "2",
+        "target": "271",
+        "relation_type": "attacked",
+        "directed": true,
+        "weight": 1,
+        "first_seen": "2026-10-07T20:03:08.313433Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/693/sources"
+      },
+      {
+        "id": "885",
+        "source": "2",
+        "target": "139",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 1,
+        "first_seen": "2026-10-07T20:10:16.154021Z",
+        "last_seen": "2026-10-07T20:10:16.154021Z",
+        "evidence_url": "/edges/885/sources"
+      },
+      {
+        "id": "919",
+        "source": "2",
+        "target": "285",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 1,
+        "first_seen": "2026-10-07T20:10:48.402180Z",
+        "last_seen": "2026-10-07T20:10:48.402180Z",
+        "evidence_url": "/edges/919/sources"
+      },
+      {
+        "id": "1045",
+        "source": "2",
+        "target": "5",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 1,
+        "first_seen": "2026-10-07T20:11:38.638099Z",
+        "last_seen": "2026-10-07T20:11:38.638099Z",
+        "evidence_url": "/edges/1045/sources"
+      },
+      {
+        "id": "1134",
+        "source": "2",
+        "target": "53",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 1,
+        "first_seen": "2026-10-07T20:12:00.111833Z",
+        "last_seen": "2026-10-07T20:12:00.111833Z",
+        "evidence_url": "/edges/1134/sources"
+      },
+      {
+        "id": "1135",
+        "source": "2",
+        "target": "191",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 1,
+        "first_seen": "2026-10-07T20:12:00.111833Z",
+        "last_seen": "2026-10-07T20:12:00.111833Z",
+        "evidence_url": "/edges/1135/sources"
+      },
+      {
+        "id": "1167",
+        "source": "2",
+        "target": "3",
+        "relation_type": "met_with",
+        "directed": false,
+        "weight": 1,
+        "first_seen": "2026-10-07T20:12:14.713913Z",
+        "last_seen": "2026-10-07T20:12:14.713913Z",
+        "evidence_url": "/edges/1167/sources"
+      },
+      {
+        "id": "29",
+        "source": "3",
+        "target": "12",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 13,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:13:28.445545Z",
+        "evidence_url": "/edges/29/sources"
+      },
+      {
+        "id": "145",
+        "source": "3",
+        "target": "109",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 11,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:28.445545Z",
+        "evidence_url": "/edges/145/sources"
+      },
+      {
+        "id": "260",
+        "source": "3",
+        "target": "131",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 8,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/260/sources"
+      },
+      {
+        "id": "351",
+        "source": "3",
+        "target": "135",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 8,
+        "first_seen": "2026-10-07T19:56:16.175316Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/351/sources"
+      },
+      {
+        "id": "355",
+        "source": "3",
+        "target": "196",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 8,
+        "first_seen": "2026-10-07T19:56:16.175316Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/355/sources"
+      },
+      {
+        "id": "28",
+        "source": "1",
+        "target": "3",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 7,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/28/sources"
+      },
+      {
+        "id": "153",
+        "source": "3",
+        "target": "111",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 7,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/153/sources"
+      },
+      {
+        "id": "356",
+        "source": "12",
+        "target": "196",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 7,
+        "first_seen": "2026-10-07T19:56:16.175316Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/356/sources"
+      },
+      {
+        "id": "353",
+        "source": "12",
+        "target": "135",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 6,
+        "first_seen": "2026-10-07T19:56:16.175316Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/353/sources"
+      },
+      {
+        "id": "31",
+        "source": "1",
+        "target": "13",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 5,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/31/sources"
+      },
+      {
+        "id": "98",
+        "source": "3",
+        "target": "53",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 5,
+        "first_seen": "2026-10-07T19:55:36.239224Z",
+        "last_seen": "2026-10-07T20:12:45.710494Z",
+        "evidence_url": "/edges/98/sources"
+      },
+      {
+        "id": "178",
+        "source": "111",
+        "target": "119",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 5,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:06.524772Z",
+        "evidence_url": "/edges/178/sources"
+      },
+      {
+        "id": "234",
+        "source": "119",
+        "target": "135",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 5,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/234/sources"
+      },
+      {
+        "id": "473",
+        "source": "3",
+        "target": "265",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 5,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:12:49.762775Z",
+        "evidence_url": "/edges/473/sources"
+      },
+      {
+        "id": "475",
+        "source": "12",
+        "target": "109",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 5,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:13:28.445545Z",
+        "evidence_url": "/edges/475/sources"
+      },
+      {
+        "id": "501",
+        "source": "3",
+        "target": "258",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 5,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:13:06.524772Z",
+        "evidence_url": "/edges/501/sources"
+      },
+      {
+        "id": "516",
+        "source": "3",
+        "target": "15",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 5,
+        "first_seen": "2026-10-07T20:02:37.526035Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/516/sources"
+      },
+      {
+        "id": "34",
+        "source": "3",
+        "target": "7",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 4,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/34/sources"
+      },
+      {
+        "id": "186",
+        "source": "3",
+        "target": "119",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 4,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/186/sources"
+      },
+      {
+        "id": "227",
+        "source": "119",
+        "target": "131",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 4,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/227/sources"
+      },
+      {
+        "id": "488",
+        "source": "3",
+        "target": "270",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 4,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/488/sources"
+      },
+      {
+        "id": "489",
+        "source": "3",
+        "target": "271",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 4,
+        "first_seen": "2026-10-07T20:02:09.802689Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/489/sources"
+      },
+      {
+        "id": "539",
+        "source": "3",
+        "target": "138",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 4,
+        "first_seen": "2026-10-07T20:02:37.526035Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/539/sources"
+      },
+      {
+        "id": "542",
+        "source": "3",
+        "target": "285",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 4,
+        "first_seen": "2026-10-07T20:02:37.526035Z",
+        "last_seen": "2026-10-07T20:13:06.524772Z",
+        "evidence_url": "/edges/542/sources"
+      },
+      {
+        "id": "4",
+        "source": "3",
+        "target": "6",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T19:55:22.116872Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/4/sources"
+      },
+      {
+        "id": "123",
+        "source": "5",
+        "target": "7",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T19:55:36.239224Z",
+        "last_seen": "2026-10-07T20:11:38.638099Z",
+        "evidence_url": "/edges/123/sources"
+      },
+      {
+        "id": "146",
+        "source": "1",
+        "target": "109",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/146/sources"
+      },
+      {
+        "id": "152",
+        "source": "3",
+        "target": "110",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/152/sources"
+      },
+      {
+        "id": "154",
+        "source": "3",
+        "target": "112",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T19:55:48.718915Z",
+        "last_seen": "2026-10-07T20:13:14.724698Z",
+        "evidence_url": "/edges/154/sources"
+      },
+      {
+        "id": "338",
+        "source": "109",
+        "target": "194",
+        "relation_type": "mentioned_with",
+        "directed": false,
+        "weight": 3,
+        "first_seen": "2026-10-07T19:56:16.175316Z",
+        "last_seen": "2026-10-07T20:12:49.762775Z",
+        "evidence_url": "/edges/338/sources"
+      }
+    ],
+    "meta": {
+      "truncated": true,
+      "reason": "max_nodes_and_max_edges",
+      "max_nodes": 40,
+      "max_edges": 80
+    }
+  }
+}

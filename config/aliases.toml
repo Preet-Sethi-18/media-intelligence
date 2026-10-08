@@ -1,0 +1,646 @@
+# Reviewed identity aliases (decision D12). Lookup is exact on the whole entity text after Unicode, case and
+# whitespace normalization and removal of a leading "the"; there is no fuzzy matching. A configured entry also
+# fixes the stored type, overriding spaCy's label (the small model often tags surnames as ORG/FAC).
+# Handles are matched only as "@handle" in text. Unmapped handles and usernames never become graph nodes.
+# Single-word person aliases yield to a full name with the same surname in the same item (context wins).
+# A country, its capital, its government and its leader are deliberately NOT aliased to each other
+# (e.g. "Kremlin" is not "Russia"). Every alias or handle may map to exactly one entity.
+# The same rule applies to companies: a parent and its subsidiary (Alphabet / Google / Google DeepMind), a company
+# and its founder, and a company and its products (OpenAI / ChatGPT) stay separate nodes.
+# Product and model names (ChatGPT, Claude, Gemini, Llama, Grok) are typed ORG: the schema has no PRODUCT type and
+# ORG is the closest "named non-person actor or artifact"; it keeps the small model from reading "Claude" or "Meta"
+# as a PERSON. Product nodes are never merged into their maker and no maker link is invented.
+# Handles are listed only where the account is the entity's own, well-known account (e.g. @sama for Sam Altman).
+# Media-outlet handles (@arstechnica) are deliberately absent: on Mastodon they open every reply as an address,
+# so mapping them would connect the outlet to everything said in its replies.
+
+# Organisations
+[[entities]]
+canonical = "United Nations"
+type = "ORG"
+aliases = ["UN", "U.N."]
+handles = ["UN"]
+
+[[entities]]
+canonical = "United Nations Security Council"
+type = "ORG"
+aliases = ["UN Security Council", "U.N. Security Council", "UNSC"]
+
+[[entities]]
+canonical = "European Union"
+type = "ORG"
+aliases = ["EU", "E.U."]
+
+[[entities]]
+canonical = "European Commission"
+type = "ORG"
+handles = ["EU_Commission"]
+
+[[entities]]
+canonical = "NATO"
+type = "ORG"
+aliases = ["North Atlantic Treaty Organization", "North Atlantic Treaty Organisation"]
+handles = ["NATO"]
+
+[[entities]]
+canonical = "International Atomic Energy Agency"
+type = "ORG"
+aliases = ["IAEA"]
+handles = ["iaeaorg"]
+
+[[entities]]
+canonical = "Hamas"
+type = "ORG"
+
+[[entities]]
+canonical = "Hezbollah"
+type = "ORG"
+aliases = ["Hizbollah"]
+
+[[entities]]
+canonical = "Houthis"
+type = "ORG"
+aliases = ["Houthi", "Houthi movement", "Ansar Allah"]
+
+[[entities]]
+canonical = "Taliban"
+type = "ORG"
+
+# Seats of government are institutions of their own, never the country (see above). Fixing the type keeps one node
+# whether the small model reads "the White House" as a place or an organisation.
+[[entities]]
+canonical = "White House"
+type = "ORG"
+
+[[entities]]
+canonical = "Kremlin"
+type = "ORG"
+
+[[entities]]
+canonical = "Pentagon"
+type = "ORG"
+
+[[entities]]
+canonical = "Truth Social"
+type = "ORG"
+
+# Geopolitical institutions and military commands seen in the Al Jazeera calibration corpus. Abbreviations in
+# parentheses ("Gulf Cooperation Council (GCC)") must resolve to the same node, or the appositive reads as a role.
+[[entities]]
+canonical = "Gulf Cooperation Council"
+type = "ORG"
+aliases = ["GCC"]
+
+[[entities]]
+canonical = "US Central Command"
+type = "ORG"
+aliases = ["CENTCOM", "U.S. Central Command", "United States Central Command", "Central Command"]
+
+[[entities]]
+canonical = "Islamic Revolutionary Guard Corps"
+type = "ORG"
+aliases = ["IRGC", "Revolutionary Guard Corps"]
+
+[[entities]]
+canonical = "US Department of the Treasury"
+type = "ORG"
+aliases = ["US Treasury", "U.S. Treasury", "US Treasury Department", "U.S. Treasury Department",
+           "Department of the Treasury", "Treasury Department", "US Department of Treasury"]
+
+[[entities]]
+canonical = "Ministry of Intelligence and Security"
+type = "ORG"
+# Iran's intelligence ministry; written "MOIS" in the corpus.
+aliases = ["MOIS", "Iranian Ministry of Intelligence", "Ministry of Intelligence"]
+[[entities]]
+canonical = "Office of Foreign Assets Control"
+type = "ORG"
+aliases = ["OFAC"]
+
+[[entities]]
+canonical = "Al Jazeera"
+type = "ORG"
+
+# News agencies quoted in the corpus (quoted_by targets). "Bloomberg" is left out: it is also a person's surname.
+[[entities]]
+canonical = "Reuters"
+type = "ORG"
+
+[[entities]]
+canonical = "Associated Press"
+type = "ORG"
+aliases = ["The Associated Press", "Associated Press news agency"]
+
+[[entities]]
+canonical = "Agence France-Presse"
+type = "ORG"
+aliases = ["AFP", "Agence France Presse"]
+
+[[entities]]
+canonical = "Fars News Agency"
+type = "ORG"
+aliases = ["Fars news agency", "Fars"]
+
+[[entities]]
+canonical = "Tasnim News Agency"
+type = "ORG"
+aliases = ["Tasnim"]
+
+# AI industry (decision D23: Hacker News and Mastodon cover the AI industry). Companies. Names that are also common
+# words or places in news text ("Amazon" the river, "intel" for intelligence) are left to spaCy, because an entry
+# here would force the ORG type onto every reading:
+[[entities]]
+canonical = "OpenAI"
+type = "ORG"
+aliases = ["Open AI", "OAI"]
+handles = ["OpenAI"]
+
+[[entities]]
+canonical = "Anthropic"
+type = "ORG"
+handles = ["AnthropicAI"]
+
+[[entities]]
+canonical = "Google"
+type = "ORG"
+handles = ["Google"]
+
+[[entities]]
+canonical = "Alphabet"
+type = "ORG"
+aliases = ["Alphabet Inc", "Alphabet Inc."]
+
+[[entities]]
+canonical = "Google DeepMind"
+type = "ORG"
+aliases = ["DeepMind"]
+handles = ["GoogleDeepMind"]
+
+[[entities]]
+canonical = "Microsoft"
+type = "ORG"
+handles = ["Microsoft"]
+
+[[entities]]
+canonical = "Meta"
+type = "ORG"
+aliases = ["Meta Platforms"]
+
+[[entities]]
+canonical = "Nvidia"
+type = "ORG"
+aliases = ["NVIDIA", "NVidia"]
+handles = ["nvidia"]
+
+# spaCy typed these ORG in one comment and LOCATION/PERSON in another, splitting one company into two nodes.
+[[entities]]
+canonical = "Cloudflare"
+type = "ORG"
+
+[[entities]]
+canonical = "Docker"
+type = "ORG"
+aliases = ["Docker Inc"]
+
+[[entities]]
+canonical = "Apple"
+type = "ORG"
+
+[[entities]]
+canonical = "Amazon Web Services"
+type = "ORG"
+aliases = ["AWS"]
+
+[[entities]]
+canonical = "Anduril Industries"
+type = "ORG"
+aliases = ["Anduril"]
+[[entities]]
+canonical = "xAI"
+type = "ORG"
+
+[[entities]]
+canonical = "SpaceX"
+type = "ORG"
+
+[[entities]]
+canonical = "Tesla"
+type = "ORG"
+
+[[entities]]
+canonical = "Hugging Face"
+type = "ORG"
+# "HF" is Hugging Face throughout the AI threads; outside that context it can mean other things (known limit).
+aliases = ["HuggingFace", "Huggingface", "HF"]
+handles = ["huggingface"]
+
+[[entities]]
+canonical = "Mistral AI"
+type = "ORG"
+aliases = ["Mistral"]
+handles = ["MistralAI"]
+
+[[entities]]
+canonical = "TSMC"
+type = "ORG"
+aliases = ["Taiwan Semiconductor Manufacturing Company", "Taiwan Semiconductor Manufacturing Co",
+           "Taiwan Semiconductor"]
+
+[[entities]]
+canonical = "SoftBank"
+type = "ORG"
+aliases = ["Softbank", "SoftBank Group"]
+
+[[entities]]
+canonical = "AMD"
+type = "ORG"
+aliases = ["Advanced Micro Devices"]
+
+[[entities]]
+canonical = "Oracle"
+type = "ORG"
+
+[[entities]]
+canonical = "Alibaba"
+type = "ORG"
+aliases = ["Alibaba Group"]
+
+[[entities]]
+canonical = "Tencent"
+type = "ORG"
+
+[[entities]]
+canonical = "Salesforce"
+type = "ORG"
+
+[[entities]]
+canonical = "IBM"
+type = "ORG"
+
+[[entities]]
+canonical = "Cerebras"
+type = "ORG"
+
+[[entities]]
+canonical = "GitHub"
+type = "ORG"
+aliases = ["Github"]
+
+[[entities]]
+canonical = "Allen Institute for AI"
+type = "ORG"
+aliases = ["Allen AI", "Ai2", "AI2"]
+
+[[entities]]
+canonical = "Wikimedia Foundation"
+type = "ORG"
+aliases = ["Wikimedia"]
+
+# AI products and models (typed ORG, see the header):
+[[entities]]
+canonical = "ChatGPT"
+type = "ORG"
+
+[[entities]]
+canonical = "Claude"
+type = "ORG"
+
+[[entities]]
+canonical = "Gemini"
+type = "ORG"
+
+[[entities]]
+canonical = "Llama"
+type = "ORG"
+
+[[entities]]
+canonical = "Grok"
+type = "ORG"
+
+# Locations (country names only; not capitals or governments). A nationality adjective ("Iranian attacks", "the
+# Iranian Foreign Ministry") is listed as an alias of its country: it names the same country, while the capital, the
+# government and the leader stay separate nodes. Multi-word phrases that contain one ("Latin American") are
+# separate spans and do not match.
+[[entities]]
+canonical = "United States"
+type = "LOCATION"
+aliases = ["US", "U.S.", "USA", "U.S.A.", "United States of America", "America", "American"]
+
+[[entities]]
+canonical = "United Kingdom"
+type = "LOCATION"
+aliases = ["UK", "U.K.", "Britain", "Great Britain", "British"]
+
+[[entities]]
+canonical = "United Arab Emirates"
+type = "LOCATION"
+aliases = ["UAE", "U.A.E.", "Emirati"]
+
+[[entities]]
+canonical = "Russia"
+type = "LOCATION"
+aliases = ["Russian Federation", "Russian"]
+
+[[entities]]
+canonical = "Iran"
+type = "LOCATION"
+aliases = ["Islamic Republic of Iran", "Iranian"]
+
+[[entities]]
+canonical = "China"
+type = "LOCATION"
+aliases = ["People's Republic of China", "PRC", "Chinese"]
+
+# Country names that are also given names: the reviewed type stops "Jordan said ..." becoming a person.
+[[entities]]
+canonical = "Israel"
+type = "LOCATION"
+aliases = ["Israeli"]
+
+[[entities]]
+canonical = "Jordan"
+type = "LOCATION"
+
+[[entities]]
+canonical = "Ukraine"
+type = "LOCATION"
+aliases = ["Ukrainian"]
+
+[[entities]]
+canonical = "Gaza Strip"
+type = "LOCATION"
+aliases = ["Gaza"]
+[[entities]]
+canonical = "Saudi Arabia"
+type = "LOCATION"
+aliases = ["Saudi"]
+[[entities]]
+canonical = "Qatar"
+type = "LOCATION"
+aliases = ["Qatari"]
+[[entities]]
+canonical = "Kuwait"
+type = "LOCATION"
+aliases = ["Kuwaiti", "State of Kuwait"]
+[[entities]]
+canonical = "Bahrain"
+type = "LOCATION"
+aliases = ["Bahraini"]
+[[entities]]
+canonical = "Oman"
+type = "LOCATION"
+aliases = ["Omani"]
+[[entities]]
+canonical = "Yemen"
+type = "LOCATION"
+aliases = ["Yemeni"]
+[[entities]]
+canonical = "Egypt"
+type = "LOCATION"
+aliases = ["Egyptian"]
+[[entities]]
+canonical = "Iraq"
+type = "LOCATION"
+aliases = ["Iraqi"]
+[[entities]]
+canonical = "Syria"
+type = "LOCATION"
+aliases = ["Syrian"]
+[[entities]]
+canonical = "Lebanon"
+type = "LOCATION"
+aliases = ["Lebanese"]
+[[entities]]
+canonical = "Pakistan"
+type = "LOCATION"
+aliases = ["Pakistani"]
+[[entities]]
+canonical = "Turkiye"
+type = "LOCATION"
+aliases = ["Türkiye", "Turkey", "Turkish"]
+[[entities]]
+canonical = "France"
+type = "LOCATION"
+aliases = ["French"]
+[[entities]]
+canonical = "Germany"
+type = "LOCATION"
+aliases = ["German"]
+# Places the small model reads as people in the calibration corpus ("Strait of Hormuz: What has happened ...").
+[[entities]]
+canonical = "Strait of Hormuz"
+type = "LOCATION"
+aliases = ["Hormuz"]
+[[entities]]
+canonical = "Bandar Abbas"
+type = "LOCATION"
+
+# People. The Elon Musk handle mapping is the evaluation PDF's normalization example.
+[[entities]]
+canonical = "Elon Musk"
+type = "PERSON"
+aliases = ["Musk"]
+handles = ["elonmusk"]
+
+[[entities]]
+canonical = "Donald Trump"
+type = "PERSON"
+aliases = ["Trump", "Donald J. Trump"]
+handles = ["realDonaldTrump"]
+
+[[entities]]
+canonical = "Joe Biden"
+type = "PERSON"
+aliases = ["Biden", "Joseph Biden", "Joseph R. Biden"]
+
+[[entities]]
+canonical = "Vladimir Putin"
+type = "PERSON"
+aliases = ["Putin"]
+
+[[entities]]
+canonical = "Xi Jinping"
+type = "PERSON"
+aliases = ["Xi"]
+
+[[entities]]
+canonical = "Volodymyr Zelenskyy"
+type = "PERSON"
+aliases = ["Zelenskyy", "Zelensky", "Zelenskiy", "Volodymyr Zelensky", "Volodymyr Zelenskiy"]
+handles = ["ZelenskyyUa"]
+
+[[entities]]
+canonical = "Benjamin Netanyahu"
+type = "PERSON"
+aliases = ["Netanyahu"]
+handles = ["netanyahu"]
+
+[[entities]]
+canonical = "António Guterres"
+type = "PERSON"
+aliases = ["Guterres", "Antonio Guterres"]
+handles = ["antonioguterres"]
+
+[[entities]]
+canonical = "Emmanuel Macron"
+type = "PERSON"
+aliases = ["Macron"]
+handles = ["EmmanuelMacron"]
+
+[[entities]]
+canonical = "Narendra Modi"
+type = "PERSON"
+aliases = ["Modi"]
+handles = ["narendramodi"]
+
+[[entities]]
+canonical = "Recep Tayyip Erdoğan"
+type = "PERSON"
+aliases = ["Erdoğan", "Erdogan", "Recep Tayyip Erdogan"]
+
+[[entities]]
+canonical = "Ali Khamenei"
+type = "PERSON"
+aliases = ["Khamenei"]
+
+[[entities]]
+canonical = "Sergey Lavrov"
+type = "PERSON"
+aliases = ["Lavrov", "Sergei Lavrov"]
+
+[[entities]]
+canonical = "Antony Blinken"
+type = "PERSON"
+aliases = ["Blinken"]
+
+[[entities]]
+canonical = "Olaf Scholz"
+type = "PERSON"
+aliases = ["Scholz"]
+
+[[entities]]
+canonical = "Mark Rutte"
+type = "PERSON"
+aliases = ["Rutte"]
+
+[[entities]]
+canonical = "Rafael Grossi"
+type = "PERSON"
+aliases = ["Grossi", "Rafael Mariano Grossi"]
+
+[[entities]]
+canonical = "Mohammad Bagher Ghalibaf"
+type = "PERSON"
+# Iran's parliament speaker: the embedded post byline "— محمدباقر قالیباف | MB Ghalibaf (@mb_ghalibaf)" is his own
+# account, and Al Jazeera writes him with and without his middle name.
+aliases = ["Mohammad Ghalibaf", "MB Ghalibaf", "Ghalibaf", "Mohammad Baqer Ghalibaf", "محمدباقر قالیباف", "قالیباف"]
+handles = ["mb_ghalibaf"]
+[[entities]]
+canonical = "Scott Bessent"
+type = "PERSON"
+aliases = ["Bessent"]
+[[entities]]
+canonical = "Abbas Araghchi"
+type = "PERSON"
+aliases = ["Araghchi"]
+
+[[entities]]
+canonical = "Masoud Pezeshkian"
+type = "PERSON"
+aliases = ["Pezeshkian"]
+
+# AI-industry executives and founders. Bare surnames are aliased only when the surname is distinctive; common
+# surnames ("Huang", "Cook", "Su", "Son") are left to in-item surname resolution against a written full name.
+[[entities]]
+canonical = "Sam Altman"
+type = "PERSON"
+aliases = ["Altman"]
+handles = ["sama"]
+
+[[entities]]
+canonical = "Dario Amodei"
+type = "PERSON"
+aliases = ["Amodei"]
+
+[[entities]]
+canonical = "Sundar Pichai"
+type = "PERSON"
+aliases = ["Pichai"]
+handles = ["sundarpichai"]
+
+[[entities]]
+canonical = "Demis Hassabis"
+type = "PERSON"
+aliases = ["Hassabis"]
+handles = ["demishassabis"]
+
+[[entities]]
+canonical = "Satya Nadella"
+type = "PERSON"
+aliases = ["Nadella"]
+handles = ["satyanadella"]
+
+[[entities]]
+canonical = "Mark Zuckerberg"
+type = "PERSON"
+aliases = ["Zuckerberg"]
+
+[[entities]]
+canonical = "Jensen Huang"
+type = "PERSON"
+
+[[entities]]
+canonical = "Tim Cook"
+type = "PERSON"
+handles = ["tim_cook"]
+
+[[entities]]
+canonical = "Mustafa Suleyman"
+type = "PERSON"
+aliases = ["Suleyman"]
+handles = ["mustafasuleyman"]
+
+[[entities]]
+canonical = "Greg Brockman"
+type = "PERSON"
+aliases = ["Brockman"]
+handles = ["gdb"]
+
+[[entities]]
+canonical = "Ilya Sutskever"
+type = "PERSON"
+aliases = ["Sutskever"]
+
+[[entities]]
+canonical = "Mira Murati"
+type = "PERSON"
+aliases = ["Murati"]
+
+[[entities]]
+canonical = "Yann LeCun"
+type = "PERSON"
+aliases = ["LeCun"]
+handles = ["ylecun"]
+
+[[entities]]
+canonical = "Lisa Su"
+type = "PERSON"
+
+[[entities]]
+canonical = "Masayoshi Son"
+type = "PERSON"
+
+[[entities]]
+canonical = "Andy Jassy"
+type = "PERSON"
+aliases = ["Jassy"]
+
+[[entities]]
+canonical = "Clément Delangue"
+type = "PERSON"
+aliases = ["Clement Delangue", "Delangue"]
+handles = ["ClementDelangue"]
+
+[[entities]]
+canonical = "Arthur Mensch"
+type = "PERSON"

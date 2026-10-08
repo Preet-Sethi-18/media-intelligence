@@ -1,0 +1,81 @@
+# Run 3 ("changed seed list"): identical to config/sources.toml except the seeds. To reproduce, copy this file
+# into config/ (next to aliases.toml/topics.toml) and run: uv run media-intelligence ingest --config config/run-3-sources.toml
+# Corpus: Al Jazeera geopolitics incl. AI/tech geopolitics (news), Hacker News AI-industry threads (discussion),
+# Mastodon AI-industry posts (microblog).
+# All crawl URLs live in configuration; change seeds here, not in code.
+# Sources are candidates until a live run confirms usable article/thread/post bodies.
+aliases_file = "aliases.toml"
+topics_file = "topics.toml"
+
+[crawl]
+max_depth = 1
+max_pages_total = 30
+max_pages_per_source = 10
+request_timeout_seconds = 60
+max_retries = 2
+delay_per_host_seconds = 2
+max_body_characters = 100000
+max_comments_per_thread = 100
+respect_robots = true
+save_raw = false
+
+[[sources]]
+name = "aljazeera"
+source_type = "news"
+adapter = "article"
+allowed_domains = ["www.aljazeera.com", "aljazeera.com"]
+include_paths = ["^/(news|features|economy)/20[0-9]{2}/[0-9]{1,2}/[0-9]{1,2}/[a-z0-9-]+/?$"]
+# Section and tag pages may be seeds: their article links are followed, the pages themselves are never stored, and a
+# section link found on an article is not crawled (listings are entry points only).
+listing_paths = ["^/(news|features|economy|middle-east|africa|asia|us-canada|latin-america|europe|asia-pacific)/?$",
+                 "^/(tag|where)/[a-z0-9-]+/?$"]
+body_selector = ".wysiwyg"
+# Inside .wysiwyg: the "Recommended Stories" list (other articles' headlines), the newsletter sign-up form and ads.
+exclude_selectors = [".more-on", ".sib-newsletter-form", ".container--ads"]
+seeds = [
+  "https://www.aljazeera.com/news/2026/7/7/us-says-strikes-launched-as-explosions-heard-in-southern-iran",
+  "https://www.aljazeera.com/news/2026/7/8/oil-prices-surge-as-us-strikes-iran-reversing-fall-to-pre-war-levels",
+  "https://www.aljazeera.com/news/2026/7/7/ships-attacked-in-the-strait-of-hormuz-what-that-means-for-ongoing-talks",
+  "https://www.aljazeera.com/news/2026/6/18/what-the-trump-iran-14-point-plan-says-about-lebanon-hormuz-and-uranium",
+  "https://www.aljazeera.com/news/2026/9/24/china-vs-us-who-is-winning-the-ai-race-in-four-charts",
+]
+
+[[sources]]
+# Community discussion of the AI industry (models, deals, markets, CEOs).
+# robots.txt allows /item pages and asks for Crawl-delay: 30.
+# Seeds may be thread pages (/item?id=...) or listing pages (front page, /best, /newest, /ask, /show):
+# links are followed only from listings, because in-thread links are comment permalinks of the same thread.
+name = "hackernews"
+source_type = "discussion"
+adapter = "hackernews"
+allowed_domains = ["news.ycombinator.com"]
+include_paths = ["^/item$"]
+listing_paths = ["^/$", "^/(news|best|newest|front|ask|show)$"]
+follow_links = "listings"
+min_delay_seconds = 30
+seeds = [
+  "https://news.ycombinator.com/item?id=49548952",
+  "https://news.ycombinator.com/item?id=49673098",
+  "https://news.ycombinator.com/item?id=49845977",
+  "https://news.ycombinator.com/item?id=49849985",
+]
+
+[[sources]]
+# Microblog posts about the AI industry from tech outlets, with public replies (mastodon.social only:
+# other servers publish their own robots.txt). Posts render client-side, so wait for the focused status.
+# Depth 0: in-thread links are reply permalinks that re-show part of the same thread. Seeds must be post URLs:
+# profile and tag pages expose almost no post links to logged-out crawlers (checked live, 8 Oct 2026).
+name = "mastodon"
+source_type = "microblog"
+adapter = "mastodon"
+allowed_domains = ["mastodon.social"]
+include_paths = ["^/@[A-Za-z0-9_]+(@[A-Za-z0-9.-]+)?/[0-9]+$"]
+max_depth = 0
+wait_for = "css:.detailed-status"
+render_wait_seconds = 4
+seeds = [
+  "https://mastodon.social/@arstechnica/117371882392930002",
+  "https://mastodon.social/@404mediaco/117378117850915865",
+  "https://mastodon.social/@404mediaco/117304393826213269",
+  "https://mastodon.social/@404mediaco/117277222579952015",
+]

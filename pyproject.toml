@@ -1,0 +1,40 @@
+[project]
+name = "media-intelligence"
+version = "0.1.0"
+description = "Evidence-backed geopolitical media knowledge graph: Crawl4AI ingestion, SQLite storage, FastAPI analysis"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4,<5",
+    "crawl4ai>=0.7,<1",
+    "en-core-web-sm",
+    "fastapi>=0.115,<1",
+    "pydantic-settings>=2,<3",
+    "spacy>=3.8,<3.9",
+    "uvicorn>=0.30,<1",
+]
+
+[project.scripts]
+media-intelligence = "media_intelligence.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.9,<0.10"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not live'"
+markers = ["live: requires real network access and a working browser"]
+
+[tool.ruff]
+line-length = 120
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
+]
+
+[tool.uv.sources]
+en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" }

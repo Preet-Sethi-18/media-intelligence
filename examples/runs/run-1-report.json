@@ -1,0 +1,237 @@
+{
+  "run_id": 1,
+  "status": "partial",
+  "exit_code": 3,
+  "live": true,
+  "stored_new": 16,
+  "stored_unchanged": 0,
+  "missing_sources": [],
+  "failed_seeds": {
+    "aljazeera": 1,
+    "hackernews": 1,
+    "mastodon": 1
+  },
+  "nodes": 360,
+  "edges": 852,
+  "semantic_edges": 43,
+  "integrity_ok": true,
+  "warnings": [
+    "Seed pages without a stored item (see sources.reasons): aljazeera=1, hackernews=1, mastodon=1"
+  ],
+  "report": "reports/run-20261007T195514Z-1/report.json",
+  "kind": "ingest_run",
+  "evidence_note": "live Crawl4AI crawl",
+  "started_at": "2026-10-07T19:55:14.891580Z",
+  "finished_at": "2026-10-07T20:06:15.230011Z",
+  "config_path": "config/sources.toml",
+  "config_hash": "94ccd120dbb3fc4402f6cd3706d76e64b645b3506ad8c212e39598ce7a2a180e",
+  "extractor_version": "rules-4+en_core_web_sm-3.8.0+cfg-fa00c81515c0",
+  "crawl_limits": {
+    "max_depth": 1,
+    "max_pages_total": 30,
+    "max_pages_per_source": 10,
+    "request_timeout_seconds": 30,
+    "max_retries": 1,
+    "delay_per_host_seconds": 2.0,
+    "max_body_characters": 100000,
+    "max_comments_per_thread": 100,
+    "respect_robots": true,
+    "save_raw": false
+  },
+  "fatal_error": null,
+  "totals": {
+    "attempted": 20,
+    "fetched": 16,
+    "failed": 4,
+    "blocked": 0,
+    "skipped": 0,
+    "extraction_failed": 0,
+    "storage_failed": 0,
+    "stored_new": 16,
+    "stored_unchanged": 0,
+    "truncated": 3
+  },
+  "sources": {
+    "aljazeera": {
+      "attempted": 10,
+      "fetched": 8,
+      "failed": 2,
+      "blocked": 0,
+      "skipped": 0,
+      "extraction_failed": 0,
+      "storage_failed": 0,
+      "stored_new": 8,
+      "stored_unchanged": 0,
+      "segments": 16,
+      "truncated": 0,
+      "stored": 8,
+      "missing_metadata": {
+        "title": 0,
+        "author": 1,
+        "published_at": 0
+      },
+      "reasons": {
+        "failed": {
+          "TimeoutError": 1,
+          "Unexpected error in _crawl_web at line 778 in _crawl_web (.v": 1
+        }
+      }
+    },
+    "hackernews": {
+      "attempted": 4,
+      "fetched": 3,
+      "failed": 1,
+      "blocked": 0,
+      "skipped": 0,
+      "extraction_failed": 0,
+      "storage_failed": 0,
+      "stored_new": 3,
+      "stored_unchanged": 0,
+      "segments": 303,
+      "truncated": 3,
+      "stored": 3,
+      "missing_metadata": {
+        "title": 0,
+        "author": 0,
+        "published_at": 0
+      },
+      "reasons": {
+        "failed": {
+          "Unexpected error in _crawl_web at line 778 in _crawl_web (.v": 1
+        }
+      }
+    },
+    "mastodon": {
+      "attempted": 6,
+      "fetched": 5,
+      "failed": 1,
+      "blocked": 0,
+      "skipped": 0,
+      "extraction_failed": 0,
+      "storage_failed": 0,
+      "stored_new": 5,
+      "stored_unchanged": 0,
+      "segments": 51,
+      "truncated": 0,
+      "stored": 5,
+      "missing_metadata": {
+        "title": 5,
+        "author": 0,
+        "published_at": 0
+      },
+      "reasons": {
+        "failed": {
+          "Unexpected error in _crawl_web at line 778 in _crawl_web (.v": 1
+        }
+      }
+    }
+  },
+  "skip_reasons": {
+    "failed": {
+      "TimeoutError": 1,
+      "Unexpected error in _crawl_web at line 778 in _crawl_web (.v": 3
+    }
+  },
+  "crawl_skips": {
+    "depth_limit": 449,
+    "duplicate_url": 3,
+    "invalid_url": 3,
+    "links_not_followed": 5370,
+    "listing_not_seed": 43,
+    "outside_source_policy": 280,
+    "source_page_limit": 13
+  },
+  "item_warnings": {
+    "normalization": {
+      "Mastodon reply targets are not exposed in rendered HTML; replies are attached to the post": 5,
+      "Discussion of external link (not crawled)": 3,
+      "Comment count capped by configuration": 3,
+      "Content was truncated by the configured size/comment limits": 3,
+      "Author unavailable": 1
+    },
+    "extraction": {
+      "Co-occurrence skipped": 2,
+      "Ambiguous surname": 1
+    }
+  },
+  "storage": {
+    "nodes_created": 360,
+    "edges_created": 852,
+    "evidence_added": 1000,
+    "mentions_added": 517,
+    "relations_skipped": 0,
+    "self_edges_rejected": 0,
+    "invalid_evidence": 0
+  },
+  "graph": {
+    "sources": 16,
+    "source_urls": 16,
+    "nodes": 360,
+    "nodes_by_type": {
+      "LOCATION": 95,
+      "ORG": 145,
+      "PERSON": 104,
+      "TOPIC": 16
+    },
+    "aliases": 549,
+    "edges": 852,
+    "edges_by_relation_type": {
+      "acquired": 1,
+      "affiliated_with": 11,
+      "attacked": 7,
+      "criticized": 10,
+      "discussed_topic": 1,
+      "mentioned_with": 809,
+      "met_with": 1,
+      "quoted_by": 8,
+      "sanctioned": 4
+    },
+    "edges_by_quality_tier": {
+      "cooccurrence": 809,
+      "semantic_rule": 43
+    },
+    "evidence": 1000,
+    "evidence_by_quality_tier": {
+      "cooccurrence": 955,
+      "semantic_rule": 45
+    },
+    "evidence_by_source_type_and_tier": {
+      "discussion": {
+        "cooccurrence": 156,
+        "semantic_rule": 1
+      },
+      "microblog": {
+        "cooccurrence": 9,
+        "semantic_rule": 1
+      },
+      "news": {
+        "cooccurrence": 790,
+        "semantic_rule": 43
+      }
+    },
+    "semantic_evidence_by_source_type_and_relation": {
+      "discussion": {
+        "acquired": 1
+      },
+      "microblog": {
+        "discussed_topic": 1
+      },
+      "news": {
+        "affiliated_with": 11,
+        "attacked": 9,
+        "criticized": 10,
+        "met_with": 1,
+        "quoted_by": 8,
+        "sanctioned": 4
+      }
+    }
+  },
+  "edge_quality": {
+    "semantic_rule": 43,
+    "cooccurrence": 809
+  },
+  "integrity": {
+    "ok": true,
+    "problems": []
+  }
+}
