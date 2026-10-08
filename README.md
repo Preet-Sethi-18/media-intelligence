@@ -61,6 +61,15 @@ curl 'http://127.0.0.1:8000/connections/new?since=<started_at of the second run>
 uv run pytest -q                                     # offline tests, no network needed
 ```
 
+**Which database?**
+
+- **Just look at our results (no crawling, no browser setup):**
+  `MI_DATABASE_PATH=examples/final.sqlite3 uv run uvicorn media_intelligence.api:app --port 8000`.
+  This is the final database from our three live runs; every id in this README refers to it. View only:
+  `ingest` refuses it because it was built with the previous extraction rules (see "Tests and verification").
+- **Run the pipeline yourself:** no setting needed. `ingest` creates `data/media_intelligence.sqlite3`, and the
+  server reads the same file, so what you crawl is what the API shows.
+
 Settings come from environment variables or `.env` (see `.env.example`): `MI_DATABASE_PATH`
 (default `data/media_intelligence.sqlite3`), `MI_REPORT_DIR`, `MI_SPACY_MODEL`, `MI_GROWTH_MIN_DELTA`,
 `MI_GROWTH_MIN_RATIO`. Exit codes: `0` complete, `1` fatal, `2` setup/config error, `3` partial
